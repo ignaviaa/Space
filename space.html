@@ -9,12 +9,14 @@
 <body>
     <div class="container">
         <div class="wrapper">
-            <div class="stars" id="stars">
+            <div class="stars" id="starx">
                 <img src="assets/stars.png">
             </div>
+            <h2 class="title" id="text">SPACE <br>EXPLORATION</h2>
             <div class="spaceship">
                 <img src="assets/spaceship.svg">
             </div>
+           
             
         </div>
 
@@ -37,11 +39,11 @@
     </div>
 
     <script>
-        let stars = document.getElementById('stars');
+        let stars = document.getElementById('starx');
 
-        window.addEventListener('scroll' ,function(){
+        window.addEventListener('scroll',() => {
             let value = window.scrollY;
-            stars.style.left = value + 'px';
+            stars.style.left = value * 5 + 'px';
         })
     </script>
 </body>
