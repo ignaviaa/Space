@@ -46,3 +46,49 @@
  .spaceship img{
     z-index: 1;
  }
+
+ .planet1 img{
+    max-width:30vw;
+    max-height:60vh;
+    mix-blend-mode: screen;
+    filter: opacity(90%);
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+ }
+
+ 
+
+ .planet2 img{
+    max-width:20vw;
+    max-height:40vh;
+    mix-blend-mode: screen;
+    position: relative;
+    left: 70%;
+    top:15em;
+    animation-name: floating;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+ }
+
+ .planet3 img{
+    max-width:20vw;
+    max-height:40vh;
+    mix-blend-mode: screen;
+    position: relative;
+    animation-name: floating;
+    animation-duration: 3.8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+ }
+
+ @keyframes floating {
+    0% { transform: translate(0,  0px); }
+    50%  { transform: translate(0, 15px); }
+    100%   { transform: translate(0, -0px); }   
+}
+
