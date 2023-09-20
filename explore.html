@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exploration</title>
+    <link rel="stylesheet" href="styles2.css">
+
+</head>
+<body>
+    <div class="scroll-container">
+        <div class="item item-1">
+            <img src="/assets/space.jpeg">
+        </div>
+        <div class="sun">
+            <img src="/assets/sunpng.png">
+        </div>
+        <div class="item item-2">
+            <img src="/assets/space.jpeg">
+        </div>
+        <div class="item item-3">
+            <img src="/assets/space.jpeg">
+        </div>
+        <div class="item item-4">
+            <img src="/assets/space.jpeg">
+        </div>
+       
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const scrollContainer = document.querySelector('.scroll-container');
+    let isScrolling = false;
+
+    scrollContainer.addEventListener('wheel', function (e) {
+        if (!isScrolling) {
+            isScrolling = true;
+            e.preventDefault();
+
+            // Scroll horizontally by manipulating the scrollLeft property
+            this.scrollLeft += e.deltaY * 6;
+
+            setTimeout(function () {
+                isScrolling = false;
+            }, 100);
+        }
+    });
+});
+    </script>
+</body>
+</html>
